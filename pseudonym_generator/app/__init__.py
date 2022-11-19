@@ -1,14 +1,16 @@
 """Application init."""
 
 import random
+from collections import defaultdict
+from pprint import pprint
 
 from .colors import Colors
 from .data.names import group_1, group_2
 
 
-def app() -> None:
+def random_fullname_generator() -> None:
     """
-    Application runner.
+    Random fullname generator.
 
     :return: None
     """
@@ -43,6 +45,29 @@ def project_pig_latin() -> None:
             print(f"{Colors.GREEN}{user_word}way")
         else:
             print(f"{Colors.YELLOW}{user_word[1:]}{user_word[0]}ay")
+        try_again = input(f"{Colors.PINK}Try again?(y/n): ").lower()
+        if try_again == "n":
+            print(f"{Colors.RED}Bye!")
+            break
+
+
+def pauper_columnar_graphic() -> None:
+    """Pauper columnar graphic.
+
+    Pauper inputs sentence.
+    Program prints list of letters and the count of letter
+
+    :return: None
+    """
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    column_dict = defaultdict(list)
+    while True:
+        user_sentence = input("Write some sentence: ").replace(" ", "")
+        for letter in user_sentence:
+            if letter in alphabet:
+                column_dict[letter].append(letter)
+        print(Colors.GREEN, end="")
+        pprint(column_dict)
         try_again = input(f"{Colors.PINK}Try again?(y/n): ").lower()
         if try_again == "n":
             print(f"{Colors.RED}Bye!")

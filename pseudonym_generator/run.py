@@ -1,7 +1,8 @@
 """Enter to our application."""
 
-from app import app, project_pig_latin
+from app import random_fullname_generator, project_pig_latin, pauper_columnar_graphic
 
 if __name__ == "__main__":
-    app()
-    project_pig_latin()
+    # random_fullname_generator()
+    # project_pig_latin()
+    pauper_columnar_graphic()
