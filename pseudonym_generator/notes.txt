@@ -1,0 +1,8 @@
+# New technologies: pylint, pydocstyle
+# Pylint:
+#     -Generate .pylintrc file -> pylint --generate-rcfile > filepath.pylintrc
+#     -Change PEP8 line max length -> pylint --max-line-length=79(it's 100 by default for pylint)
+# Pydocstyle:
+#     -Check some file -> pydocstyle file_path.py
+#     -Check all project from current directory -> pydocstyle
+# READ MORE!!!
