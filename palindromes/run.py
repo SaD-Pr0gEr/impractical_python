@@ -14,4 +14,7 @@ def run(file_paths: List[Union[str, Path]]):
 
 
 if __name__ == "__main__":
-    run([APPLICATION_DATA_DIR / "american_dict.txt", APPLICATION_DATA_DIR / "names.txt"])
+    run([
+        APPLICATION_DATA_DIR / "american_dict.txt",
+        APPLICATION_DATA_DIR / "names.txt"
+    ])
