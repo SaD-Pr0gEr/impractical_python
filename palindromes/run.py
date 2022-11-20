@@ -2,8 +2,8 @@
 from pathlib import Path
 from typing import List, Union
 
-from app import app
-from config import APPLICATION_DATA_DIR
+from palindromes.app import app
+from .config import APPLICATION_DATA_DIR
 
 
 def run(file_paths: List[Union[str, Path]]):
