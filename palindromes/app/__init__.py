@@ -7,7 +7,7 @@ from .script import palindrome_words_list
 def app(file_path: str) -> list:
     """Application entry.
 
-    :return: None
+    :return: list
     """
     if not os.path.exists(file_path):
         raise IOError("File not found")
